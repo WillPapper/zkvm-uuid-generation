@@ -14,7 +14,7 @@ lto = "fat"
 [dependencies]
 jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", features = ["host"] }
 guest = { path = "./guest" }
-uuid = { version = "1.8.0", features = ["v3", "v5", "serde", "std"] }  # include "std" if working in a std environment
+uuid = { version = "1.8.0", features = ["v3", "v5"] }  # include "std" if working in a std environment
 
 
 [patch.crates-io]

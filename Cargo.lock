@@ -2435,7 +2435,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a183cf7feeba97b4dd1c0d46788634f6221d87fa961b305bed08c851829efcc0"
 dependencies = [
  "md-5",
- "serde",
  "sha1_smol",
 ]
 
