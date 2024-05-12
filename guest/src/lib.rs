@@ -14,17 +14,3 @@ fn generate_uuid(name: &[u8]) -> [u8; 16] {
     uuid_fixed_size.copy_from_slice(uuid_bytes);
     uuid_fixed_size
 }
-
-#[jolt::provable]
-fn fib(n: u32) -> u128 {
-    let mut a: u128 = 0;
-    let mut b: u128 = 1;
-    let mut sum: u128;
-    for _ in 1..n {
-        sum = a + b;
-        a = b;
-        b = sum;
-    }
-
-    b
-}
