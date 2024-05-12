@@ -15,17 +15,19 @@ pub fn main() {
     let is_valid_v3 = verify_generate_uuid_v3(proof_v3);
     let duration_verify_v3 = start_verify_v3.elapsed();
 
+    // Output for V3 UUID
+    println!("--- Version 3 UUID ---");
     println!(
-        "v3 output: {}",
+        "Output: {}",
         Uuid::from_bytes(output_v3).hyphenated().to_string()
     );
-    println!("v3 valid: {}", is_valid_v3);
+    println!("Valid: {}", is_valid_v3);
     println!(
-        "Time taken for V3 UUID proving: {} ms",
+        "Time taken for proving: {} ms",
         duration_proof_v3.as_millis()
     );
     println!(
-        "Time taken for V3 UUID verification: {} ms",
+        "Time taken for verification: {} ms",
         duration_verify_v3.as_millis()
     );
 
@@ -42,17 +44,19 @@ pub fn main() {
     let is_valid_v5 = verify_generate_uuid_v5(proof_v5);
     let duration_verify_v5 = start_verify_v5.elapsed();
 
+    // Output for V5 UUID
+    println!("--- Version 5 UUID ---");
     println!(
-        "v5 output: {}",
+        "Output: {}",
         Uuid::from_bytes(output_v5).hyphenated().to_string()
     );
-    println!("v5 valid: {}", is_valid_v5);
+    println!("Valid: {}", is_valid_v5);
     println!(
-        "Time taken for V5 UUID proving: {} ms",
+        "Time taken for proving: {} ms",
         duration_proof_v5.as_millis()
     );
     println!(
-        "Time taken for V5 UUID verification: {} ms",
+        "Time taken for verification: {} ms",
         duration_verify_v5.as_millis()
     );
 }
