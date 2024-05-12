@@ -1,5 +1,5 @@
 [package]
-name = "stdlib-guest"
+name = "guest"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,4 +11,5 @@ path = "./src/lib.rs"
 guest = []
 
 [dependencies]
-jolt = { package = "jolt-sdk", path = "../../../jolt-sdk", features = ["guest-std"] }
+jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", features = ["guest-std"] }
+uuid = { version = "1.8.0", features = ["v3", "serde", "std"] }

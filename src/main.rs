@@ -1,17 +1,14 @@
+use uuid::Uuid;
+
 pub fn main() {
-    let (prove, verify) = guest::build_int_to_string();
+    let (prove_generate_uuid, verify_generate_uuid) = guest::build_generate_uuid();
 
-    let (output, proof) = prove(81);
-    let is_valid = verify(proof);
+    let (output, proof) = prove_generate_uuid(b"hello@example.com");
+    let is_valid = verify_generate_uuid(proof);
 
-    println!("int to string output: {:?}", output);
-    println!("int to string valid: {}", is_valid);
-
-    let (prove, verify) = guest::build_string_concat();
-
-    let (output, proof) = prove(20);
-    let is_valid = verify(proof);
-
-    println!("string concat output: {:?}", output);
-    println!("string concat valid: {}", is_valid);
+    println!(
+        "output: {}",
+        Uuid::from_bytes(output).hyphenated().to_string()
+    );
+    println!("valid: {}", is_valid);
 }
