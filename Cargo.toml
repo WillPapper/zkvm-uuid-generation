@@ -14,6 +14,8 @@ lto = "fat"
 [dependencies]
 jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", features = ["host"] }
 guest = { path = "./guest" }
+uuid = { version = "1.8.0", features = ["v3", "serde", "std"] }  # include "std" if working in a std environment
+
 
 [patch.crates-io]
 ark-ff = { git = "https://github.com/a16z/arkworks-algebra", branch = "optimize/field-from-u64" }
