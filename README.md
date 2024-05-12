@@ -14,5 +14,16 @@ You can modify the strings in use in [src/main.rs](src/main.rs) and evaluate tim
 
 ## Quickstart
 
-1. Follow the [Jolt Quickstart](https://jolt.a16zcrypto.com/usage/quickstart.html)
-2. Run `cargo run --release` inside the root directory (the same one as this README)
+1. Install Jolt:
+
+```
+cargo +nightly install --git https://github.com/a16z/jolt --force --bins jolt
+```
+
+2. Run the following command inside the root directory (the same one as this README):
+
+```
+cargo run --release
+```
+
+For more information, see the [Jolt Quickstart](https://jolt.a16zcrypto.com/usage/quickstart.html)
