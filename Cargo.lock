@@ -1970,6 +1970,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "sha1_smol"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae1a47186c03a32177042e55dbc5fd5aee900b8e0069a8d70fba96a9375cd012"
+
+[[package]]
 name = "sha3"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2430,6 +2436,7 @@ checksum = "a183cf7feeba97b4dd1c0d46788634f6221d87fa961b305bed08c851829efcc0"
 dependencies = [
  "md-5",
  "serde",
+ "sha1_smol",
 ]
 
 [[package]]
