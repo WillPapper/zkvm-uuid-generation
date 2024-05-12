@@ -1,6 +1,6 @@
 # zkvm-uuid-generation
 
-#### Verifiable UUID generation using A16Z's [Jolt zkVM](https://github.com/a16z/jolt)
+Verifiable UUID generation using A16Z Crypto's [Jolt zkVM](https://github.com/a16z/jolt)
 
 ## Overview
 
