@@ -1,16 +1,16 @@
+#![cfg_attr(feature = "guest", no_std)]
 #![no_main]
 
 #[jolt::provable]
-fn int_to_string(n: i32) -> String {
-    n.to_string()
-}
-
-#[jolt::provable]
-fn string_concat(n: i32) -> String {
-    let mut res = String::new();
-    for i in 0..n {
-        res += &i.to_string();
+fn fib(n: u32) -> u128 {
+    let mut a: u128 = 0;
+    let mut b: u128 = 1;
+    let mut sum: u128;
+    for _ in 1..n {
+        sum = a + b;
+        a = b;
+        b = sum;
     }
 
-    res
+    b
 }

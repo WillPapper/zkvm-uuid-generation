@@ -1,17 +1,9 @@
 pub fn main() {
-    let (prove, verify) = guest::build_int_to_string();
+    let (prove_fib, verify_fib) = guest::build_fib();
 
-    let (output, proof) = prove(81);
-    let is_valid = verify(proof);
+    let (output, proof) = prove_fib(50);
+    let is_valid = verify_fib(proof);
 
-    println!("int to string output: {:?}", output);
-    println!("int to string valid: {}", is_valid);
-
-    let (prove, verify) = guest::build_string_concat();
-
-    let (output, proof) = prove(20);
-    let is_valid = verify(proof);
-
-    println!("string concat output: {:?}", output);
-    println!("string concat valid: {}", is_valid);
+    println!("output: {}", output);
+    println!("valid: {}", is_valid);
 }
